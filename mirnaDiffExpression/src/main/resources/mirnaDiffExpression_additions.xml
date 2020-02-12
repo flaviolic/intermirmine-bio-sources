@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!-- This file details any extensions needed to the data model to store data from this source, everything else is automatically generated from the model description so this is all we need to do to add to the model. -->
+
+<classes>
+<!-- add any <class> elements here -->
+
+	<class name="MirnaDiffExpression" is-interface="true">
+	  <reference name="matureMirna" referenced-type="MatureMirna"/>
+	  <attribute name="log2FC" type="java.lang.Double"/>
+	  <attribute name="pValue" type="java.lang.Double"/>
+	  <attribute name="adjpValue" type="java.lang.Double"/>
+	  <attribute name="tgwDisp" type="java.lang.Double"/>
+	  <attribute name="upDown" type="java.lang.String"/>
+	  <attribute name="condition" type="java.lang.String"/>
+	</class>
+
+	<class name="MatureMirna" is-interface="true">
+		<collection name="mirnaDiffExpressions" referenced-type="MirnaDiffExpression" />
+	</class>
+
+</classes>

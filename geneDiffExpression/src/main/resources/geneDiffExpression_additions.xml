@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!-- This file details any extensions needed to the data model to store data from this source, everything else is automatically generated from the model description so this is all we need to do to add to the model. -->
+
+<classes>
+<!-- add any <class> elements here -->
+
+    <class name="GeneDiffExpression" is-interface="true">
+        <attribute name="ensemblID" type="java.lang.String"/>
+        <!-- reference name="gene" referenced-type="Gene"/ -->
+        <attribute name="baseMean" type="java.lang.Double"/>
+        <attribute name="log2FC" type="java.lang.Double"/>
+        <attribute name="pValue" type="java.lang.Double"/>
+        <attribute name="adjpValue" type="java.lang.Double"/>
+        <attribute name="condition" type="java.lang.String"/>
+    </class>
+
+    <!-- class name="Gene" is-interface="true">
+        <collection name="mrnaDiffExpressions" referenced-type="MrnaDiffExpression" />
+    </class -->
+
+</classes>

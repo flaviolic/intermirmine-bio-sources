@@ -1,0 +1,7 @@
+rootProject.name = 'bio-sources'
+include ':bio-source-miRBase'
+project(':bio-source-miRBase').projectDir = new File(settingsDir, './miRBase')
+include ':bio-source-mirnaDiffExpression'
+project(':bio-source-mirnaDiffExpression').projectDir = new File(settingsDir, './mirnaDiffExpression')
+include ':bio-source-geneDiffExpression'
+project(':bio-source-geneDiffExpression').projectDir = new File(settingsDir, './geneDiffExpression')

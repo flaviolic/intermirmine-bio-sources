@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!-- This file details any extensions needed to the data model to store data from this source, everything else is automatically generated from the model description so this is all we need to do to add to the model. -->
+
+<classes>
+<!-- add any <class> elements here -->
+
+	<class name="MirnaPrimaryTranscript" extends="Transcript" is-interface="true">
+		<attribute name="evidence" type="java.lang.String" />
+		<attribute name="experiment" type="java.lang.String" />
+		<attribute name="mirnaPriSequence" type="java.lang.String" />
+		<collection name="mirnas" referenced-type="MatureMirna"/>
+	</class>
+
+	<class name="MatureMirna" extends="Transcript" is-interface="true">
+		<attribute name="mirnaSequence" type="java.lang.String" />
+		<reference name="mirnaPrimary" referenced-type="MirnaPrimaryTranscript"/>
+	</class>
+
+</classes>
